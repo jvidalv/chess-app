@@ -32,3 +32,4 @@ it's actually more efficient than leveraging an `useState` or similar React solu
 folder example of how I like to organize components, atomic organization (atoms, molecules...).
 - Error handling I didn't handle it for the list, only for the GM details and I make the assumption that it is a `not found`.
 - I would leverage playwright for both E2E and unit testing.
+- I could have leveraged `clsx` or `classNames` in the Button component to merge both defined classNames and passed classNames.
