@@ -29,8 +29,12 @@ export const useOneGrandmastersApi = (username: string) => {
       league: string;
       streaming_platforms: string[];
     }> =>
-      fetch(`https://api.chess.com/pub/player/${username}`).then((r) =>
-        r.json(),
-      ),
+      fetch(`https://api.chess.com/pub/player/${username}`).then((r) => {
+        if (r.status !== 200) {
+          // We will make the assumption is a 404
+          throw new Error();
+        }
+        return r.json();
+      }),
   });
 };

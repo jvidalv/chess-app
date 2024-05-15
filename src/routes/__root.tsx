@@ -21,9 +21,12 @@ const RouteComponent = () => {
           )}
         </nav>
       </header>
-      <main className="max-w-4xl mx-auto py-4">
+      <main className="max-w-4xl mx-auto py-4 min-h-screen">
         <Outlet />
       </main>
+      <footer className="border-t border-black pt-4 pb-3">
+        <div className="max-w-4xl mx-auto text-center">Josep Vidal @ 2024</div>
+      </footer>
     </>
   );
 };
