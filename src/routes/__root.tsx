@@ -1,4 +1,9 @@
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import {
+  createRootRoute,
+  Link,
+  Outlet,
+  ScrollRestoration,
+} from "@tanstack/react-router";
 
 const RouteComponent = () => {
   const { username } = Route.useParams<{ username: string }>();
@@ -22,6 +27,7 @@ const RouteComponent = () => {
         </nav>
       </header>
       <main className="max-w-4xl mx-auto py-4 min-h-screen">
+        <ScrollRestoration />
         <Outlet />
       </main>
       <footer className="border-t border-black pt-4 pb-3">
